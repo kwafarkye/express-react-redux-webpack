@@ -15,6 +15,7 @@ import getRoutes from './routes';
 import ReduxRouterEngine from 'electrode-redux-router-engine';
 import Promise from 'bluebird';
 
+import indexRouter from './api/index';
 
 const targetUrl = `http://${config.apiHost}:${config.apiPort}`;
 const app = new Express();
@@ -49,6 +50,8 @@ proxy.on('error', (error, req, res) => {
   json = {error: 'proxy_error', reason: error.message};
   res.end(JSON.stringify(json));
 });
+
+app.use('/', indexRouter);
 
 let store;
 

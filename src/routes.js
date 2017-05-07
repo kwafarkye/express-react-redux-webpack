@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, IndexRoute} from 'react-router';
+import { Route, IndexRoute } from 'react-router';
 import { Home } from './components/home';
 import SSRCachingTemplateType from './components/SSRCachingTemplateType';
 import SSRCachingSimpleType from './components/SSRCachingSimpleType';
